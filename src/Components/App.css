@@ -5,8 +5,10 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #282D35;
+  padding: 0;
 }
+
+
 
 img {
   width: 4.5rem;
@@ -14,7 +16,7 @@ img {
 
 .navbar {
   background-color: #21222A;
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,6 +37,8 @@ img {
   font-size: 22px;
   color: #61DAFB;
   font-style: normal;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
 }
 
 .extra-title {
@@ -45,26 +49,29 @@ img {
 }
 
 .main {
-  background-image: url("../../public/logo512.png");
+  /* background-image: url("../../public/logo512.png");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 280px;
-  margin-top: 7rem;
+  background-size: 280px; */
+  /* margin-top: 7rem; */
   height: 450px;
   padding: 0 40px;
+  background-color: #282D35;
 }
 
 .main-title {
   color: white;
-  padding-top: 50px;
+  padding-top: 40px;
   font-weight: 700;
   font-size: 40px;
+  margin: 0;
 }
 
 .list {
   font-size: 16px;
   color: white;
   line-height: 20px;
+  padding-top: 20px;
 }
 
 .list li {
@@ -74,4 +81,8 @@ img {
 .list li::marker {
   color: #61DAFB;
   font-size: 1.4rem;
+}
+
+body  {
+  width: 600px;
 }
