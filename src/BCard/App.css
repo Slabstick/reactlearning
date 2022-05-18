@@ -1,0 +1,129 @@
+.container {
+    width: 550px;
+    height: 868px;
+    background-color: #23252C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-family: inter, sans-serif;
+}
+
+.card {
+    display: block;
+    width: 317px;
+    height: 780px;
+    border-radius: 10px;
+    background-color: #1A1B21;
+    
+}
+
+.picture {
+    background-image: url("./Pass.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 317px;
+    overflow: hidden;
+    height: 317px;
+    border-radius: 10px 10px 0 0;
+}
+
+.main {
+    margin: 0 2rem;
+}
+
+.header {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.role {
+    color: #F3BF99;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: .4rem;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 12px;
+}
+
+
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    height: 34px;
+    width: 115px;
+    /* margin: 0 1rem; */
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.twitter {
+    background-image: url("./twitter.svg");
+    background-repeat: no-repeat;
+    background-position: 18px;
+    background-color: #5093E2;
+    color: aliceblue;
+    background-size: 15%;
+}
+
+.mail {
+    background-image: url("./email.png");
+    background-repeat: no-repeat;
+    background-position: 25px;
+    color: #374151;
+    background-size: 15%;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.footer {
+    background-color: #161619;
+    position: relative;
+    height: 64px;
+    bottom: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footlogo {
+    height: 25px;
+    margin: 0 .7rem;
+    filter: brightness(0.4);
+}
+
