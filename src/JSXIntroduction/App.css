@@ -30,7 +30,7 @@ body {
 }
 
 .contact-card>img {
-    width: 100%;
+    width: 400px;
     height: auto;
     align-self: center;
     border-radius: 5px;
