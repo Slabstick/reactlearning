@@ -7,7 +7,6 @@ body {
     width: 550px;
     height: 853px;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .navbar {
@@ -49,22 +48,35 @@ h1 {
 
 .cards {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     width: 176px;
-    margin-left: 2rem;
+    max-height: auto;
+    margin : 0 1rem;
+    position: relative;
+}
+
+.card-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
 
 .rating p {
-margin: 0 .1rem;
+    margin: 0 .1rem;
 }
 
 .card-image {
     margin-bottom: 0;
-    height: auto;
 }
 
 .rating {
