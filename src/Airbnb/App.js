@@ -3,8 +3,20 @@ import "./App.css";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Card from "./Card";
-import zaferes from "./image 12.png"
+import data from "./data";
 
+
+
+let cardData = data.map(item => {
+    return  <Card
+                img={`./images/${item.coverImg}`}
+                rating={item.stats.rating}
+                reviewCount={item.stats.reviewCount}
+                location={item.location}
+                title={item.title}
+                price={item.price}
+            />
+})
 
 export default class App extends React.Component {
     render() {
@@ -12,14 +24,7 @@ export default class App extends React.Component {
             <div className="container">
                 <Navbar />
                 <Hero />
-                <Card 
-                    img={zaferes} 
-                    rating={5.0} 
-                    reviewCount={6} 
-                    country="Germany" 
-                    title="Life Lessons with Katie Zaferes" 
-                    price={136}
-                    />
+                <div className="cards">{cardData}</div>
             </div>
         )
     }
