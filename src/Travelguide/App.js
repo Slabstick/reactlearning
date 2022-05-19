@@ -5,20 +5,20 @@ import "./App.css"
 import data from "./data"
 
 let cardData = data.map(item => {
-    return <Card
-        key={item.id}
-        {...item}
-        length={data.length}
-    />
+	return <Card
+		key={item.id}
+		{...item}
+		length={data.length}
+	/>
 })
 
 export default class App extends React.Component {
-    render() {
-        return(
-            <div className="container">
-                <Nav />
-                {cardData}
-            </div>
-        )
-    }
+	render() {
+		return(
+			<div className="container">
+				<Nav />
+				{cardData}
+			</div>
+		)
+	}
 }
