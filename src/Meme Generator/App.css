@@ -74,3 +74,9 @@
 	font-family: Karla, sans-serif;
 	cursor: pointer;
 }
+
+.meme-image {
+	margin-top: 1rem;
+	max-height: 268px;
+	width: auto;
+}
