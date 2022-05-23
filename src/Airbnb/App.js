@@ -17,10 +17,10 @@ let cardData = data.map(item => {
 export default class App extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className="abnb-container">
                 <Navbar />
                 <Hero />
-                <div className="cards">{cardData}</div>
+                <div className="abnb-cards">{cardData}</div>
             </div>
         )
     }

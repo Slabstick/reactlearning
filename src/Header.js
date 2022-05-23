@@ -1,11 +1,16 @@
 import React from 'react';
 
 function Header(props) {
+
 	return (
 		<div className='main-header'>
 			<form className='app-picker'>
 				<label htmlFor='app'>Choose App:</label> <br/>
-				<select id='app'>
+				<select 
+				id='app'
+				onChange={props.handleChange}
+				value={props.choice}
+				>
 					<option value="airbnb">Airbnb</option>
 					<option value="bCard">Business Card</option>
 					<option value="chessboard">Chessboard</option>
