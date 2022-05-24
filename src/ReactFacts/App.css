@@ -1,8 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
+rf-container body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
@@ -10,56 +6,44 @@ body {
 
 
 
-img {
-  width: 4.5rem;
-}
-
-.navbar {
+.rf-navbar {
   background-color: #21222A;
-  /* position: absolute; */
   display: flex;
   align-items: center;
+  padding: 30px 25px; 
   justify-content: space-between;
-  padding: 0 2%;
-  height: 7rem;
-  width: 100%;
+  height: 2rem;
   left: 0;
   top: 0;
 }
 
-.logo {
-  display: flex;
-  justify-content: left;
+.rf-logo {
+	width: 30px;
+	margin-right: 10px;
 }
 
-.title {
+.rf-title {
   font-weight: 700;
   font-size: 22px;
   color: #61DAFB;
   font-style: normal;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
+  margin-right: auto;
 }
 
-.extra-title {
+.rf-extra-title {
   color: #DEEBF8;
   text-align: right;
   font-weight: 600;
   font-size: 18px;
 }
 
-.main {
-  /* background-image: url("../../public/logo512.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 280px; */
-  /* margin-top: 7rem; */
+.rf-main {
   height: 450px;
   padding: 0 40px;
   background-color: #282D35;
 }
 
-.main-title {
+.rf-main-title {
   color: white;
   padding-top: 40px;
   font-weight: 700;
@@ -67,22 +51,22 @@ img {
   margin: 0;
 }
 
-.list {
+.rf-list {
   font-size: 16px;
   color: white;
   line-height: 20px;
   padding-top: 20px;
 }
 
-.list li {
+.rf-list li {
   padding: 10px;
 }
 
-.list li::marker {
+.rf-list li::marker {
   color: #61DAFB;
   font-size: 1.4rem;
 }
 
-body  {
+.rf-container body  {
   width: 600px;
 }

@@ -4,8 +4,8 @@ export default class Main extends React.Component {
     render() {
         return(
             <div>
-                <h1 className="main-title">Fun facts about React</h1>
-                <ul className="list">
+                <h1 className="rf-main-title">Fun facts about React</h1>
+                <ul className="rf-list">
                     <li>Was released in 2013</li>
                     <li>Was originally created by Jordan Walke</li>
                     <li>Has well over 100K stars on GitHub</li>

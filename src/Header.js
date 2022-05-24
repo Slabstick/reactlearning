@@ -19,6 +19,7 @@ function Header(props) {
 					<option value="meme-Generator">Meme Generator</option>
 					<option value="signUpForm">SignUp Form</option>
 					<option value="travelguide">Travelguide</option>
+					<option value="reactfacts">React Facts</option>
 				</select>
 			</form>
 		</div>

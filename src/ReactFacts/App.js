@@ -6,9 +6,9 @@ import './App.css'
 export default class App extends React.Component {
     render() {
         return(
-            <div className="container">
+            <div className="rf-container">
                 <Navbar />
-                <div className="main">
+                <div className="rf-main">
                     <Main />
                 </div>
                 

@@ -7,6 +7,7 @@ import JSXIntroduction from "./JSXIntroduction/App"
 import MemeGen from "./Meme Generator/App"
 import SignUpForm from "./SignUpForm/App"
 import TravelGuide from "./Travelguide/App"
+import ReactFacts from "./ReactFacts/App"
 
 
 function Mainapp() {
@@ -24,6 +25,7 @@ function Mainapp() {
 			case "meme-Generator" : return <MemeGen />
 			case "signUpForm" : return <SignUpForm />
 			case "travelguide" : return <TravelGuide />
+			case "reactfacts" : return <ReactFacts />
 	}
 	}
 	

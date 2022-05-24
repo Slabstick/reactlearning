@@ -1,8 +1,4 @@
 import React from 'react';
-import memesData from './memesData';
-
-
-
 
 function Meme(props) {
 
@@ -38,7 +34,7 @@ function Meme(props) {
 				</input>
 			</div>
 			<div className='mg-meme'>
-				<img src={props.meme.randomImage} alt="randomly generated meme image" className='mg-meme-image' />
+				<img src={props.meme.randomImage} alt="randomly generated meme" className='mg-meme-image' />
 				<h2 className='mg-meme-text top'>{props.meme.topText}</h2>
 				<h2 className='mg-meme-text bottom'>{props.meme.bottomText}</h2>
 			</div>
