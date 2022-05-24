@@ -10,6 +10,7 @@ function Header(props) {
 				id='app'
 				onChange={props.handleChange}
 				value={props.choice}
+				className="main-select"
 				>
 					<option value="airbnb">Airbnb</option>
 					<option value="bCard">Business Card</option>

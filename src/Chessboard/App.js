@@ -23,7 +23,7 @@ export default function App() {
 		)
 	})
 	return (
-		<div className='box-container'>
+		<div className='cb-box-container'>
 			{cbElements}
 		</div>
 	)

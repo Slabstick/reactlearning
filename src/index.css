@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-	sans-serif;
+		font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -10,7 +8,7 @@ body {
   top: 2%;
   transform: translate(-50%, -0%);
   background-color: #1C1C1C;
-  color: white;
+  /* color: white; */
 
 }
 
@@ -30,4 +28,15 @@ code {
 	left: 50%;
 	top: 2%;
 	transform: translate(-50%, -0%);
+}
+
+.mainapp {
+	position: absolute;
+	left: 50%;
+	/* top: 110%; */
+	transform: translate(-50%, 5%);
+}
+
+.main-select {
+	border-radius: 5px;
 }

@@ -1,4 +1,4 @@
-.container {
+.bc-container {
     width: 550px;
     height: 868px;
     background-color: #23252C;
@@ -9,7 +9,7 @@
     font-family: inter, sans-serif;
 }
 
-.card {
+.bc-card {
     display: block;
     width: 317px;
     height: 780px;
@@ -18,7 +18,7 @@
     
 }
 
-.picture {
+.bc-picture {
     background-image: url("./Pass.png");
     background-repeat: no-repeat;
     background-size:cover;
@@ -28,27 +28,27 @@
     border-radius: 10px 10px 0 0;
 }
 
-.main {
+.bc-main {
     margin: 0 2rem;
 }
 
-.header {
+.bc-header {
     text-align: center;
 }
 
-h1 {
+.bc-container h1 {
     margin-top: 2rem;
     margin-bottom: 0;
     font-weight: 700;
     font-size: 30px;
 }
 
-h2, h3, h4, h5, h6 {
+.bc-container h2, h3, h4, h5, h6 {
     margin-top: 1rem;
     margin-bottom: 0;
 }
 
-.role {
+.bc-role {
     color: #F3BF99;
     text-align: center;
     font-size: 16px;
@@ -56,7 +56,7 @@ h2, h3, h4, h5, h6 {
     margin-top: .4rem;
 }
 
-.link {
+.bc-link {
     text-decoration: none;
     color: aliceblue;
     font-size: 12px;
@@ -64,13 +64,13 @@ h2, h3, h4, h5, h6 {
 
 
 
-.buttons {
+.bc-buttons {
     margin-top: 1rem;
     display: flex;
     justify-content: space-evenly;
 }
 
-button {
+.bc-container button {
     height: 34px;
     width: 115px;
     /* margin: 0 1rem; */
@@ -81,7 +81,7 @@ button {
     cursor: pointer;
 }
 
-.twitter {
+.bc-twitter {
     background-image: url("./twitter.svg");
     background-repeat: no-repeat;
     background-position: 18px;
@@ -90,7 +90,7 @@ button {
     background-size: 15%;
 }
 
-.mail {
+.bc-mail {
     background-image: url("./email.png");
     background-repeat: no-repeat;
     background-position: 25px;
@@ -98,19 +98,19 @@ button {
     background-size: 15%;
 }
 
-h3 {
+.bc-container h3 {
     font-size: 16px;
     font-weight: 700;
     font-style: normal;
 }
 
-p {
+.bc-container p {
     font-size: 10px;
     font-weight: 400;
     line-height: 150%;
 }
 
-.footer {
+.bc-footer {
     background-color: #161619;
     position: relative;
     height: 64px;
@@ -121,7 +121,7 @@ p {
     align-items: center;
 }
 
-.footlogo {
+.bc-footlogo {
     height: 25px;
     margin: 0 .7rem;
     filter: brightness(0.4);

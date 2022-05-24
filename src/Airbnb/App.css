@@ -1,4 +1,4 @@
-body {
+.abnb-container * {
     font-family: Poppins, sans-serif;
 }
 
@@ -9,7 +9,7 @@ body {
     border-radius: 10px;
 }
 
-.navbar {
+.abnb-navbar {
     height: 70px;
     width: 100%;
     top: 0;
@@ -19,27 +19,27 @@ body {
     border-radius: 10px 10px 0 0;
 }
 
-.logo {
+.abnb-logo {
     margin-left: 1rem;
 }
 
-.hero {
+.abnb-hero {
     display: flexbox;
     padding: 2rem;
 }
 
-.group77 {
+.abnb-group77 {
     width: 80%;
     margin-left: 8%;
 }
 
-:local(h1) {
+.abnb-container h1 {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 0;
 }
 
-.introduction {
+.abnb-introduction {
     margin-top: 0;
     max-width: 65%;
     font-size: 16px;
@@ -52,7 +52,7 @@ body {
     overflow-x: auto;
 }
 
-.card {
+.abnb-card {
     display: flex;
     flex-direction: column;
     width: 176px;
@@ -61,7 +61,7 @@ body {
     position: relative;
 }
 
-.card-badge {
+.abnb-card-badge {
     position: absolute;
     top: 6px;
     left: 6px;
@@ -71,15 +71,15 @@ body {
     font-weight: bold;
 }
 
-.rating p {
+.abnb-rating p {
     margin: 0 .1rem;
 }
 
-.card-image {
+.abnb-card-image {
     margin-bottom: 0;
 }
 
-.rating {
+.abnb-rating {
     display:flex;
     justify-content: left;
     align-items: center;
@@ -88,18 +88,18 @@ body {
     margin-top: 0.25rem;
 }
 
-.star {
+.abnb-star {
     height: 14px;
     width: auto;
     margin-right: .25rem;
 }
 
-.ratings-count, .ratings-location {
+.abnb-ratings-count, .ratings-location {
     color: #918E9B;
     margin-left: .125rem;
 }
 
-.description {
+.abnb-description {
     font-size: 11px;
     font-weight: 300;
     line-height: 110%;
@@ -107,15 +107,15 @@ body {
     margin-bottom: 0.2rem;
 }
 
-.prices {
+.abnb-prices {
     font-size: 12px;
     display: flex;
 }
 
-.prices p {
+.abnb-prices p {
     margin: 0 .2rem 0 0;
 }
 
-.price {
+.abnb-price {
     font-weight: 600;
 }

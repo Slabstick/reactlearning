@@ -22,19 +22,19 @@ function Meme() {
 	}
 
 	return (
-		<div className='meme-container'>
-			<div className='form'>
-					<input type={'text'} id={'textup'} name={'textup'} placeholder={'Top text'} className='text'></input>
-					<input type={'text'} id={'textdown'} name={'textdown'} placeholder={'Bottom text'} className='text'></input>
+		<div className='mg-meme-container'>
+			<div className='mg-form'>
+					<input type={'text'} id={'textup'} name={'textup'} placeholder={'Top text'} className='mg-text'></input>
+					<input type={'text'} id={'textdown'} name={'textdown'} placeholder={'Bottom text'} className='mg-text'></input>
 				<input 
 				type={'submit'} 
 				value={'Get a new meme image 🖼'} 
-				className='button'
+				className='mg-button'
 				onClick={getMemeImage}
 				>
 				</input>
 			</div>
-			<img src={meme.randomImage} alt="" className='meme-image'/>
+			<img src={meme.randomImage} alt="" className='mg-meme-image'/>
 		</div>
 	)
 }

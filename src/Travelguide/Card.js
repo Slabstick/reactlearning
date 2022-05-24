@@ -13,19 +13,19 @@ export default class Card extends React.Component {
 		}
 		return(
 			<div>
-				<div className="card-container">
-					<div className="image-wrapper">
-						<img src={this.props.imageUrl} alt="" className="card-image" />
+				<div className="tg-card-container">
+					<div className="tg-image-wrapper">
+						<img src={this.props.imageUrl} alt="" className="tg-card-image" />
 					</div>
-					<div className="card-text">
-						<div className="card-location">
-							<img src="./images/pin-icon.png" alt="" className="pin-icon" />
-							<span className="location">{this.props.location.toUpperCase()}</span>
-							<a href={this.props.googleMapsUrl} className="location-link" >View on Google Maps</a>
+					<div className="tg-card-text">
+						<div className="tg-card-location">
+							<img src="./images/pin-icon.png" alt="" className="tg-pin-icon" />
+							<span className="tg-location">{this.props.location.toUpperCase()}</span>
+							<a href={this.props.googleMapsUrl} className="tg-location-link" >View on Google Maps</a>
 						</div>
-						<h2 className="card-title">{this.props.title}</h2>
-						<h3 className="date">{this.props.startDate} - {this.props.endDate}</h3>
-						<p className="description">{this.props.description}</p>
+						<h2 className="tg-card-title">{this.props.title}</h2>
+						<h3 className="tg-date">{this.props.startDate} - {this.props.endDate}</h3>
+						<p className="tg-description">{this.props.description}</p>
 
 					</div>
 					

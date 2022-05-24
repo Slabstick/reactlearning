@@ -15,7 +15,7 @@ let cardData = data.map(item => {
 export default class App extends React.Component {
 	render() {
 		return(
-			<div className="container">
+			<div className="tg-container">
 				<Nav />
 				{cardData}
 			</div>

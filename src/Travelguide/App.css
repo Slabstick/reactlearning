@@ -1,14 +1,12 @@
-* {
-	box-sizing: border-box;
-	font-family: Inter, sans-serif;
-}
 
-.container {
+
+.tg-container {
 	width: 550px;
 	background-color: white;
+	font-family: 'Inter', sans-serif;
 }
 
-.nav {
+.tg-nav {
 	background-color: #F55A5A;
 	height: 55px;
 	display: flex;
@@ -18,34 +16,34 @@
 	margin-bottom: 2rem;
 }
 
-.nav>h1 {
+.tg-nav>h1 {
 	font-weight: 500;
 	font-size: 15px;
 	margin: .5rem;
 }
 
-.card-container {
+.tg-card-container {
 	display: flex;
 	align-items: center;
 	height: 168px;
 	margin: 1rem 2rem;
 }
 
-.image-wrapper{
+.tg-image-wrapper{
 	display: inline-block;
 	overflow: hidden;
 	max-width: 126px;
 	border-radius: 10px;
 }
 
-.card-image {
+.tg-card-image {
 	width: auto;
 	max-height: 168px;
 	object-fit: fill;
 	transform: translate(-25%, 0%);
 }
 
-.card-text {
+.tg-card-text {
 	max-width: 326px;
 	max-height: 144px;
 	display: flex;
@@ -53,35 +51,35 @@
 	margin: 1rem;
 }
 
-.location {
+.tg-location {
 	font-size: 10px;
 	letter-spacing: .17em;
 	margin: 0 .5rem;
 }
 
-.location-link {
+.tg-location-link {
 	color: #918E9B;
 	font-size: 10px;
 	font-weight: 400;
 }
 
-.card-title {
+.tg-card-title {
 	font-size: 25px;
 	font-weight: 700;
 	margin: 0.5rem 0;
 }
 
-.date {
+.tg-date {
 	font-size: 10px;
 	font-weight: 700;
 }
 
-.description {
+.tg-description {
 	font-size: 10px;
 	font-weight: 400;
 }
 
-hr {
+.tg-container>hr {
 	margin: 1rem 2rem;
 	border: 0;
 	border-top: 1px solid rgb(228, 228, 228);

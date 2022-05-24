@@ -29,12 +29,12 @@ function App() {
 
 	return (
 		<div>
-			<div className="form-container">
-				<form className="form" onSubmit={handleSubmit}>
+			<div className="suf-form-container">
+				<form className="suf-form" onSubmit={handleSubmit}>
 					<input
 						type="email"
 						placeholder="Email address"
-						className="form--input"
+						className="suf-form--input"
 						name="email"
 						value={formData.email}
 						onChange={handleChange}
@@ -43,7 +43,7 @@ function App() {
 					<input
 						type="password"
 						placeholder="Password"
-						className="form--input"
+						className="suf-form--input"
 						name="password"
 						value={formData.password}
 						onChange={handleChange}
@@ -52,7 +52,7 @@ function App() {
 					<input
 						type="password"
 						placeholder="Confirm password"
-						className="form--input"
+						className="suf-form--input"
 						name="passwordConfirm"
 						value={formData.passwordConfirm}
 						onChange={handleChange}
@@ -72,7 +72,7 @@ function App() {
 						<label htmlFor="okayToEmail">I want to join the newsletter</label>
 					</div>
 					<button
-						className="form--submit"
+						className="suf-form--submit"
 					>
 						Sign up
 					</button>

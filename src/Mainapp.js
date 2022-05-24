@@ -33,7 +33,10 @@ function Mainapp() {
 	return (
 		<div>
 			<Header choice={appChoice} handleChange={handleChange}/>
-			{renderApp()}
+			<div className='mainapp'>
+				{renderApp()}
+			</div>
+			
 		</div>
 	);
 }

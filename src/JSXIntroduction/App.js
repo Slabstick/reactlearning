@@ -10,7 +10,7 @@ import pumpkin from "./images/pumpkin.jpg"
 export default class App extends React.Component {
     render () {
         return(
-            <div className="contacts">
+            <div className="cc-contacts">
                 <Contact
                     img={mrWhiskers}
                     name="Mr. Whiskerson"
