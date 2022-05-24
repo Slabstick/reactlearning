@@ -4,37 +4,45 @@ import memesData from './memesData';
 
 
 
-function Meme() {
-
-	const [meme, setMeme] = React.useState({
-		topText: "",
-		bottomText: "",
-		randomImage: "http://i.imgflip.com/1bij.jpg"
-	});
-	const [allMemeImages, setAllMemeImages] = React.useState(memesData);
-
-	function getMemeImage() {
-	const rand = Math.floor(Math.random() * allMemeImages.data.memes.length);
-	setMeme(prevImage => ({
-		...prevImage,
-		randomImage: allMemeImages.data.memes[rand].url
-	}));
-	}
+function Meme(props) {
 
 	return (
 		<div className='mg-meme-container'>
 			<div className='mg-form'>
-					<input type={'text'} id={'textup'} name={'textup'} placeholder={'Top text'} className='mg-text'></input>
-					<input type={'text'} id={'textdown'} name={'textdown'} placeholder={'Bottom text'} className='mg-text'></input>
 				<input 
-				type={'submit'} 
-				value={'Get a new meme image 🖼'} 
-				className='mg-button'
-				onClick={getMemeImage}
+					type={'text'} 
+					id={'topText'} 
+					name={'topText'} 
+					placeholder={'Top text'} 
+					className='mg-text'
+					value={props.meme.topText}
+					onChange={props.setText}
+				>
+				</input>
+				<input 
+					type={'text'} 
+					id={'bottomText'} 
+					name={'bottomText'} 
+					placeholder={'Bottom text'} 
+					className='mg-text'
+					value={props.meme.bottomText}
+					onChange={props.setText}
+				>
+				</input>
+				<input 
+					type={'submit'} 
+					value={'Get a new meme image 🖼'} 
+					className='mg-button'
+					onClick={props.setMeme}
 				>
 				</input>
 			</div>
-			<img src={meme.randomImage} alt="" className='mg-meme-image'/>
+			<div className='mg-meme'>
+				<img src={props.meme.randomImage} alt="randomly generated meme image" className='mg-meme-image' />
+				<h2 className='mg-meme-text top'>{props.meme.topText}</h2>
+				<h2 className='mg-meme-text bottom'>{props.meme.bottomText}</h2>
+			</div>
+			
 		</div>
 	)
 }

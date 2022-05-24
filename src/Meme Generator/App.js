@@ -2,18 +2,40 @@ import React, { Component } from 'react';
 import "./App.css"
 import Header from './Header';
 import Meme from './Meme';
+import memesData from './memesData';
 
 function App() {
-	const [textData, setTextData] = React.useState({
+	const [meme, setMeme] = React.useState({
 		topText: "",
-		bottomText: ""
-	})
+		bottomText: "",
+		randomImage: "http://i.imgflip.com/1bij.jpg"
+	});
+
+	const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+
+	function handleMemeChange() {
+		const rand = Math.floor(Math.random() * allMemeImages.data.memes.length);
+		setMeme(prevImage => ({
+			...prevImage,
+			randomImage: allMemeImages.data.memes[rand].url
+		}));
+	}
+
+	function handleTextChange(event) {
+		const {name, value} = event.target
+		setMeme(prevMeme => ({
+			...prevMeme,
+			[name]: value
+		}))
+	}
 		return (
 			<div className='mg-container'>
-				<Header 
-					
+				<Header />
+				<Meme 
+					meme = {meme}
+					setMeme = {handleMemeChange}
+					setText = {handleTextChange}
 				/>
-				<Meme />
 			</div>
 		)
 	}

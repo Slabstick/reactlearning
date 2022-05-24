@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 function Header() {
 
+
 		return (
 			<div className='mg-header'>
 				<div className='mg-logo-container'>
