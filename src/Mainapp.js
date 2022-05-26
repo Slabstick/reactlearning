@@ -8,10 +8,16 @@ import MemeGen from "./Meme Generator/App"
 import SignUpForm from "./SignUpForm/App"
 import TravelGuide from "./Travelguide/App"
 import ReactFacts from "./ReactFacts/App"
+import Tenzies from "./tenzies/App"
 
 
 function Mainapp() {
-	const [appChoice, setAppChoice] = React.useState("bCard")
+	const [appChoice, setAppChoice] = React.useState(localStorage.getItem('appChoice') || "bCard")
+	
+	React.useEffect(() => {
+		return localStorage.setItem('appChoice', appChoice)
+	}, [appChoice])
+	
 
 	function handleChange(event) {
 		setAppChoice(event.target.value)
@@ -26,6 +32,8 @@ function Mainapp() {
 			case "signUpForm" : return <SignUpForm />
 			case "travelguide" : return <TravelGuide />
 			case "reactfacts" : return <ReactFacts />
+			case "tenzies" : return <Tenzies />
+			default: return <BCard />
 	}
 	}
 	

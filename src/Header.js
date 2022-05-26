@@ -20,6 +20,7 @@ function Header(props) {
 					<option value="signUpForm">SignUp Form</option>
 					<option value="travelguide">Travelguide</option>
 					<option value="reactfacts">React Facts</option>
+					<option value="tenzies">Tenzies</option>
 				</select>
 			</form>
 		</div>

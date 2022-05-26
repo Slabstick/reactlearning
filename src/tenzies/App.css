@@ -1,0 +1,112 @@
+.tg-main {
+	height: 380px;
+	width: 360px;
+	background-color: #0b2434;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Inter, sans-serif;
+	color: #4a4e74;
+}
+
+.tg-game-container {
+	height: 320px;
+	width: 320px;
+	border-radius: 10px;
+	background-color: #F5F5F5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.tg-game {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.tg-title {
+	color: #2b283a;
+	font-size: 26px;
+	text-align: center;
+	margin: 0;
+	font-family: Karla, sans-serif;
+	letter-spacing: -1px;
+}
+
+.tg-rules {
+	font-size: 13px;
+	text-align: center;
+	width: 230px;
+	margin: 0;
+}
+
+.tg-dice {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+	margin: 1.5rem;
+}
+
+.tg-die {
+	width: 36px;
+	height: 36px;
+	background-color: #ffffff;
+	color: #2b283a;
+	font-family: Karla, sans-serif;
+	font-weight: 700;
+	font-size: 21px;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: darkgrey 1px 2px 5px;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.tg-die-held {
+	width: 36px;
+	height: 36px;
+	background-color: #59e391;
+	color: #2b283a;
+	font-family: Karla, sans-serif;
+	font-weight: 700;
+	font-size: 21px;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: darkgrey 1px 2px 5px;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.tg-die:hover {
+	background-color: #a3dbb9;
+}
+
+.tg-button {
+	width: 92px;
+	height: 36px;
+	border: 0;
+	border-radius: 5px;
+	background-color: #5035FF;
+	color: #FFFFFF;
+	font-family: Karla, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	box-shadow: darkgrey 1px 2px 5px;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.tg-button:hover {
+	background-color: #7c68ff;
+}
+
+.tg-button:focus, .tg-die:focus, .tg-die-held:focus {
+	outline: none;
+}
+
+.tg-button:active, .tg-die:active, .tg-die-held:active {
+	box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
