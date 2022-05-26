@@ -1,11 +1,21 @@
 import React from 'react';
 import "./App.css"
 import Die from './Die';
+import Confetti from 'react-confetti'
 
 function App() {
 
-	const [dice, setDice] = React.useState(allNewDice());
-	let [win, setWin] = React.useState(false)
+	const [dice, setDice] = React.useState(JSON.parse(localStorage.getItem('dice')) || allNewDice());
+	let [win, setWin] = React.useState(JSON.parse(localStorage.getItem('win')) || false);
+	let [rounds, setRounds] = React.useState(Number(localStorage.getItem('rounds')) || 0)
+
+	React.useEffect(()=> {
+		localStorage.setItem('dice', JSON.stringify(dice))
+		localStorage.setItem('win', win)
+		localStorage.setItem('rounds', rounds)
+	},[dice, win, rounds])
+
+	console.log(localStorage.getItem('win'))
 	
 
 	function allNewDice() {
@@ -35,19 +45,40 @@ function App() {
 		})
 	}
 
+	function tutorial() {
+		if (rounds === 0) {
+			return 'Roll until all dice are the same. Click each die to freeze it at its current value between rolls.'
+		}
+
+		if (win === true) {
+			return `YOU WON AFTER ${rounds} ROUNDS!!!`
+		}
+
+		if (rounds > 0) {
+			return `Good Luck!`
+		}
+	}
+
 	function cast() {
-		setDice(oldDice => {
-			return oldDice.map(oldDie => {
-				if (oldDie.isHeld) {
-					return oldDie;
-				} else {
-					return {
-						...oldDie,
-						value: Math.ceil(Math.random()*6)
+		if (!win) {
+			setRounds(oldRounds => oldRounds + 1)
+			setDice(oldDice => {
+				return oldDice.map(oldDie => {
+					if (oldDie.isHeld) {
+						return oldDie;
+					} else {
+						return {
+							...oldDie,
+							value: Math.ceil(Math.random()*6)
+						}
 					}
-				}
+				})
 			})
-		})
+		} else {
+			setDice(allNewDice())
+			setRounds(0)
+			setWin(false)
+		}
 	}
 	const dielements = dice.map((die, index) => {
 		return <Die key={index} id={die.id} value={die.value} isHeld={die.isHeld} clickDie={clickDie}/>
@@ -57,19 +88,21 @@ function App() {
 		const diceMap = dice.map(die => die.value)
 		if (diceMap.every(value => value === dice[0].value) === true) {
 			setWin(true);
+			console.log(`You won after ${rounds} Rounds`)
 		}
-	}, [dice])
+	}, [dice, rounds])
 
 	return (
 		<main className='tg-main'>
+			{win && <Confetti height='380px' width='360px' />}
 			<div className='tg-game-container'>
 				<div className='tg-game'>
-					<h1 className='tg-title'>Tenzies</h1>
-					<p className='tg-rules'>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+					<h1 className='tg-title'>{win ? 'WINNER!' : 'Tenzies'}</h1>
+					<p className='tg-rules'>{tutorial()}</p>
 					<div className='tg-dice'>
 						{dielements}
 					</div>
-					<button className='tg-button' onClick={cast} disabled={win && true}>{win? 'YOU WON!' : 'Roll'}</button>
+					<button className='tg-button' onClick={cast}>{win? 'Restart?' : 'Roll'}</button>
 				</div>
 			</div>
 		</main>
