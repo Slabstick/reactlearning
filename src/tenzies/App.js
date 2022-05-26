@@ -88,7 +88,6 @@ function App() {
 		const diceMap = dice.map(die => die.value)
 		if (diceMap.every(value => value === dice[0].value) === true) {
 			setWin(true);
-			console.log(`You won after ${rounds} Rounds`)
 		}
 	}, [dice, rounds])
 
@@ -102,7 +101,7 @@ function App() {
 					<div className='tg-dice'>
 						{dielements}
 					</div>
-					<button className='tg-button' onClick={cast}>{win? 'Restart?' : 'Roll'}</button>
+					<button className='tg-button' onClick={cast}>{win ? 'Restart?' : 'Roll'}</button>
 				</div>
 			</div>
 		</main>
@@ -110,3 +109,5 @@ function App() {
 }
 
 export default App;
+
+//TODO: Add Timer & Highscore (to localstorage) and add dots to dice instead of numbers
