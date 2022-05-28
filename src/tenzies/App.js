@@ -15,7 +15,7 @@ function App() {
 		localStorage.setItem('rounds', rounds)
 	},[dice, win, rounds])
 
-	console.log(localStorage.getItem('win'))
+	// console.log(localStorage.getItem('win'))
 	
 
 	function allNewDice() {
@@ -27,7 +27,8 @@ function App() {
 			return {
 				value: die,
 				isHeld: false,
-				id: index
+				id: index,
+				rolling: false
 			}
 		})
 	}
@@ -59,21 +60,25 @@ function App() {
 		}
 	}
 
-	function cast() {
+	function rollOnce() {
+		setDice(oldDice => {
+			return oldDice.map(oldDie => {
+				if (oldDie.isHeld) {
+					return oldDie;
+				} else {
+					return {
+						...oldDie,
+						value: Math.ceil(Math.random() * 6)
+					}
+				}
+			})
+		})
+	}
+
+	function rollDice() {
 		if (!win) {
 			setRounds(oldRounds => oldRounds + 1)
-			setDice(oldDice => {
-				return oldDice.map(oldDie => {
-					if (oldDie.isHeld) {
-						return oldDie;
-					} else {
-						return {
-							...oldDie,
-							value: Math.ceil(Math.random()*6)
-						}
-					}
-				})
-			})
+			rollOnce();
 		} else {
 			setDice(allNewDice())
 			setRounds(0)
@@ -85,8 +90,7 @@ function App() {
 	})
 	// Win condition
 	React.useEffect(()=> {
-		const diceMap = dice.map(die => die.value)
-		if (diceMap.every(value => value === dice[0].value) === true) {
+		if (dice.every(die => die.value === dice[0].value && die.isHeld) === true) {
 			setWin(true);
 		}
 	}, [dice, rounds])
@@ -101,7 +105,7 @@ function App() {
 					<div className='tg-dice'>
 						{dielements}
 					</div>
-					<button className='tg-button' onClick={cast}>{win ? 'Restart?' : 'Roll'}</button>
+					<button className='tg-button' onClick={rollDice}>{win ? 'Restart?' : 'Roll'}</button>
 				</div>
 			</div>
 		</main>
