@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/reactlearning/static/css/main.faa974d6.css",
+    "main.js": "/reactlearning/static/js/main.66f40107.js",
+    "static/js/787.06d9b269.chunk.js": "/reactlearning/static/js/787.06d9b269.chunk.js",
+    "static/media/pumpkin.jpg": "/reactlearning/static/media/pumpkin.1dff80a001236bd0116c.jpg",
+    "static/media/felix.jpg": "/reactlearning/static/media/felix.62dadaee6117da4ac4bf.jpg",
+    "static/media/mr-whiskerson.jpg": "/reactlearning/static/media/mr-whiskerson.cd5497f5080bde1f367f.jpg",
+    "static/media/Pass.png": "/reactlearning/static/media/Pass.732ce90c719606c105ea.png",
+    "static/media/fluffykins.jpg": "/reactlearning/static/media/fluffykins.48f0b21216ed99cf6dfe.jpg",
+    "static/media/logo.svg": "/reactlearning/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/reactlearning/index.html",
+    "static/media/twitter.svg": "/reactlearning/static/media/twitter.b48dac5bf2f72aefa2268ae04bf9f600.svg",
+    "static/media/brand-github.svg": "/reactlearning/static/media/brand-github.9b4362b5d23a96c2dadfe3d4d70beec2.svg",
+    "static/media/brand-twitch.svg": "/reactlearning/static/media/brand-twitch.e2c0b8410138cc788e7e5acb8c78eb6e.svg",
+    "static/media/brand-instagram.svg": "/reactlearning/static/media/brand-instagram.2a43ca0017dc594c30e538e5f40cd6ed.svg",
+    "static/media/phone.svg": "/reactlearning/static/media/phone.95bc6948b3345f7b6df87342f4c6c29e.svg",
+    "static/media/mail.svg": "/reactlearning/static/media/mail.f22930024e2c033fc8c01e101a516b88.svg",
+    "main.faa974d6.css.map": "/reactlearning/static/css/main.faa974d6.css.map",
+    "main.66f40107.js.map": "/reactlearning/static/js/main.66f40107.js.map",
+    "787.06d9b269.chunk.js.map": "/reactlearning/static/js/787.06d9b269.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.faa974d6.css",
+    "static/js/main.66f40107.js"
+  ]
+}
