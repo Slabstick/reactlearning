@@ -55,6 +55,12 @@ code {
 	font-weight: 900;
 	cursor: pointer;
 	background-color: #B0916E;
+	text-transform: uppercase;
+	outline: none;
+	text-align: center;
+	transition: .2s;
+	height: 30px;
+	appearance: none;
 }
 
 .main-select option {

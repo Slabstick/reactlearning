@@ -12,7 +12,7 @@ import Tenzies from "./tenzies/App"
 
 
 function Mainapp() {
-	const [appChoice, setAppChoice] = React.useState(localStorage.getItem('appChoice') || "bCard")
+	const [appChoice, setAppChoice] = React.useState(localStorage.getItem('appChoice') || "tenzies")
 	
 	React.useEffect(() => {
 		return localStorage.setItem('appChoice', appChoice)

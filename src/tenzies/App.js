@@ -141,7 +141,7 @@ function App() {
 
 	return (
 		<main className='tg-main'>
-			{win && <Confetti height='380px' width='360px' />}
+			{win && <Confetti />}
 			<div className='tg-game-container'>
 				<div className='tg-header'>
 					<h1 className='tg-title'>{win ? 'WINNER!' : 'Tenzies'}</h1>
@@ -152,8 +152,8 @@ function App() {
 					<div className='tg-dice'>
 						{dielements}
 					</div>
-					<button 
-						className='tg-button' 
+					<button
+						className='tg-button'
 						onClick={rollDice}
 						disabled={animate ? true : false}
 					>{win ? 'Restart?' : 'Roll'}</button>
