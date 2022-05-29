@@ -2,24 +2,20 @@ import React, { useState, useEffect } from 'react';
 
 function Die(props) {
 	const [animation, setAnimation] = useState(1);
-	// if (props.isRolling) {
-	// 	console.log(`${props.id} is rolling!`)
-	// } else {
-	// 	console.log(`${props.id} is sleep!`)
-	// }
 
 	useEffect(()=> {
-		if (props.isRolling) {
+		if (props.isRolling) { //animate randomly between 1 and 6 every 50ms
 			const interval = setInterval(()=>{
 				setAnimation(Math.ceil(Math.random() * 6));
 			}, 50);
 			return () => clearInterval(interval)
 		}
 	}, [props.isRolling, animation])
-
+	// console.log(props.rounds)
 	return (
 		<button 
-			className={props.isHeld === false ? 'tg-die' : 'tg-die-held'} 
+			className={props.isHeld === false ? 'tg-die' : 'tg-die-held'}
+			disabled={props.rounds === 0 ? true : false}
 			onClick={()=>props.clickDie(props.id)}
 		>
 			{props.isRolling ? animation : props.value}

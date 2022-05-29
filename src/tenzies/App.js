@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import "./App.css"
 import Die from './Die';
 import Confetti from 'react-confetti'
@@ -9,21 +9,21 @@ function App() {
 	const [win, setWin] = useState(JSON.parse(localStorage.getItem('win')) || false);
 	const [rounds, setRounds] = useState(Number(localStorage.getItem('rounds')) || 0);
 	const [animate, setAnimate] = useState(false);
-	const [timeStart, setTimeStart] = useState(new Date());
+	const [timeStart, setTimeStart] = useState(Date.parse(localStorage.getItem('timeStart')) || new Date());
+	const [timeWon, setTimeWon] = useState(Number(localStorage.getItem('timeWon')) || 1000);
 
-	let timeNow = new Date();
-	let timePlayed = parseInt((timeNow - timeStart)/1000);
+
 	// console.log(timePlayed)
 
 	React.useEffect(()=> {
 		localStorage.setItem('dice', JSON.stringify(dice));
 		localStorage.setItem('win', win);
 		localStorage.setItem('rounds', rounds);
-	},[dice, win, rounds]);
+		localStorage.setItem('timeWon', timeWon);
+		localStorage.setItem('timeStart', timeStart);
+	},[dice, win, rounds, timeWon, timeStart]);
 
-	// console.log(localStorage.getItem('win'))
-
-
+	console.log(localStorage.getItem('timeStart'))
 
 	function allNewDice() {
 		const diceArray = []
@@ -39,27 +39,26 @@ function App() {
 			};
 		});
 	}
-
 	function clickDie(dieId) {
 		setDice(oldDice => {
 			return oldDice.map(oldDie => {
 				if (oldDie.id === dieId) {
 					return {...oldDie, 
-							isHeld: !oldDie.isHeld};
-				} else {
-					return oldDie;
-				}
+						isHeld: !oldDie.isHeld};
+					} else {
+						return oldDie;
+					}
+				});
 			});
-		});
-	}
-
+		}
+		
 	function tutorial() {
 		if (rounds === 0) {
 			return 'Roll until all dice are the same. Click each die to freeze it at its current value between rolls.';
 		}
 
 		if (win === true) {
-			return `YOU WON AFTER ${rounds} ROUNDS AFTER ${timePlayed} SECONDS!`;
+			return `YOU WON AFTER ${rounds} ROUNDS WITH ${timeWon} SECONDS!`;
 		}
 
 		if (rounds > 0) {
@@ -103,7 +102,7 @@ function App() {
 			}
 		}));
 	}
-
+	// console.log(timeStart)
 	useEffect(()=>{
 		if (animate) {
 			animateRollingDice();
@@ -116,8 +115,12 @@ function App() {
 		};
 	}, [animate]);
 	// console.log(animate)
+	let timeNow = new Date();
 	function rollDice() {
 		if (!win) {
+			if (rounds === 0) {
+				setTimeStart(timeNow);
+			}
 			setRounds(oldRounds => oldRounds + 1);
 			setAnimate(true);
 		} else {
@@ -135,16 +138,33 @@ function App() {
 					clickDie={clickDie} 
 					isRolling={die.isRolling}
 					animate={animate}
+					rounds={rounds}
 				/>
 	})
 	// Win condition
-	useEffect(()=> {
-		if (dice.every(die => die.value === dice[0].value && die.isHeld) === true) {
+	useMemo(()=> {
+		if (dice.every(die => die.value === dice[0].value && die.isHeld) === true && !win) {
 			setWin(true);
-			timePlayed = timeNow -timeStart;
+			let timeNow = new Date();
+			setTimeWon(parseInt((timeNow - timeStart) / 1000));
 		}
-	}, [dice, rounds]);
+	}, [dice, timeStart, win]);
 
+	function reset() {
+		setDice(allNewDice());
+		setRounds(0);
+		setWin(false);
+	}
+
+	let button = () => {
+		if (win) {
+			return 'Restart?';
+		} else if (rounds === 0) {
+			return 'Start!';
+		} else {
+			return 'Roll!';
+		}
+	}
 	return (
 		<main className='tg-main'>
 			{win && <Confetti />}
@@ -158,11 +178,18 @@ function App() {
 					<div className='tg-dice'>
 						{dielements}
 					</div>
-					<button
-						className='tg-button'
-						onClick={rollDice}
-						disabled={animate ? true : false}
-					>{win ? 'Restart?' : 'Roll'}</button>
+						<div className='buttons'>
+						<button
+							className='tg-button'
+							onClick={rollDice}
+							disabled={animate ? true : false}
+						>{button()}</button>
+						<button
+							className='tg-reset'
+							onClick={reset}
+						>Reset</button>
+						</div>
+					
 				</div>
 			</div>
 		</main>

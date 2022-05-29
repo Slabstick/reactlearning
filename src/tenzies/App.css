@@ -105,6 +105,12 @@
 	background-color: #ff00bf;
 }
 
+.buttons {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
 .tg-button {
 	width: 92px;
 	height: 36px;
@@ -120,14 +126,31 @@
 	transition: all .5s;
 }
 
-.tg-button:hover {
+.tg-reset {
+	width: 92px;
+	height: 36px;
+	border: 3px solid black;
+	border-radius: 5px;
+	background-color: #2200ff;
+	color: #FFFFFF;
+	font-family: Libre Franklin, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	box-shadow: black 1px 2px;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.tg-button:hover, .tg-reset:hover {
 	background-color: #ff00bf;
 }
 
-.tg-button:focus, .tg-die:focus, .tg-die-held:focus {
+.tg-button:focus, .tg-die:focus, .tg-die-held:focus,
+.tg-reset:focus {
 	outline: none;
 }
 
-.tg-button:active, .tg-die:active, .tg-die-held:active {
+.tg-button:active, .tg-die:active, .tg-die-held:active,
+.tg-reset:active {
 	box-shadow: inset 2px 2px #000000;
 }
