@@ -5,7 +5,7 @@ function Header(props) {
 	return (
 		<div className='main-header'>
 			<form className='app-picker'>
-				<label htmlFor='app'>Choose App:</label> <br/>
+				<label htmlFor='app' className='picker-label'>Choose App:</label> <br/>
 				<select 
 				id='app'
 				onChange={props.handleChange}

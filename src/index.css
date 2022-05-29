@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body {
   margin: 0;
 		font-family: 'Inter', sans-serif;
@@ -7,7 +13,7 @@ body {
   left: 50%;
   top: 2%;
   transform: translate(-50%, -0%);
-  background-color: #1C1C1C;
+  background-color: #830000;
   /* color: white; */
 
 }
@@ -21,13 +27,17 @@ code {
 	height: 5rem;
 	background-color: blueviolet;
 	width: 100%;
+	border: 5px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.app-picker {
-	position: absolute;
-	left: 50%;
-	top: 2%;
-	transform: translate(-50%, -0%);
+.picker-label {
+	font-family: Libre Franklin, 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	text-align: center;
 }
 
 .mainapp {
@@ -39,4 +49,17 @@ code {
 
 .main-select {
 	border-radius: 5px;
+	border: 2px solid black;
+	box-shadow: 3px 3px black;
+	font-family: Libre Franklin, 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	cursor: pointer;
+}
+
+.main-select option {
+	font-family: Libre Franklin, 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	box-shadow: 4px 4px black;
 }
