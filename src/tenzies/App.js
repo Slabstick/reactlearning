@@ -6,10 +6,14 @@ import Confetti from 'react-confetti'
 function App() {
 
 	const [dice, setDice] = useState(JSON.parse(localStorage.getItem('dice')) || allNewDice());
-	let [win, setWin] = useState(JSON.parse(localStorage.getItem('win')) || false);
-	let [rounds, setRounds] = useState(Number(localStorage.getItem('rounds')) || 0);
-	let [animate, setAnimate] = useState(false);
-	
+	const [win, setWin] = useState(JSON.parse(localStorage.getItem('win')) || false);
+	const [rounds, setRounds] = useState(Number(localStorage.getItem('rounds')) || 0);
+	const [animate, setAnimate] = useState(false);
+	const [timeStart, setTimeStart] = useState(new Date());
+
+	let timeNow = new Date();
+	let timePlayed = parseInt((timeNow - timeStart)/1000);
+	console.log(timePlayed)
 
 	React.useEffect(()=> {
 		localStorage.setItem('dice', JSON.stringify(dice));
@@ -18,7 +22,8 @@ function App() {
 	},[dice, win, rounds]);
 
 	// console.log(localStorage.getItem('win'))
-	
+
+
 
 	function allNewDice() {
 		const diceArray = []
@@ -54,7 +59,7 @@ function App() {
 		}
 
 		if (win === true) {
-			return `YOU WON AFTER ${rounds} ROUNDS!!!`;
+			return `YOU WON AFTER ${rounds} ROUNDS AFTER ${timePlayed} SECONDS!`;
 		}
 
 		if (rounds > 0) {
@@ -136,6 +141,7 @@ function App() {
 	useEffect(()=> {
 		if (dice.every(die => die.value === dice[0].value && die.isHeld) === true) {
 			setWin(true);
+			timePlayed = timeNow -timeStart;
 		}
 	}, [dice, rounds]);
 
