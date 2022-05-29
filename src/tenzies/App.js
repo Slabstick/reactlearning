@@ -167,7 +167,7 @@ function App() {
 	}
 	return (
 		<main className='tg-main'>
-			{win && <Confetti />}
+			<span className='tg-confetti'>{win && <Confetti />}</span>
 			<div className='tg-game-container'>
 				<div className='tg-header'>
 					<h1 className='tg-title'>{win ? 'WINNER!' : 'Tenzies'}</h1>
