@@ -13,7 +13,7 @@ function App() {
 
 	let timeNow = new Date();
 	let timePlayed = parseInt((timeNow - timeStart)/1000);
-	console.log(timePlayed)
+	// console.log(timePlayed)
 
 	React.useEffect(()=> {
 		localStorage.setItem('dice', JSON.stringify(dice));
