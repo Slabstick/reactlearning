@@ -8,7 +8,7 @@ export default class Main extends React.Component {
                 <header className="bc-header">
                     <h1 className="bc-name">Slab Stick</h1>
                     <h2 className="bc-role">Future Fullstack Developer</h2>
-                    <a href="https://github.slabstick.io" className="bc-link">github.slabstick.io</a>
+                    <a href="https://slabstick.github.io/reactlearning/" className="bc-link">slabstick.github.io/reactlearning/</a>
                     <div className="bc-buttons">
                         <a href="mailto:slabsticktwitch@gmail.com">
                             <button className="bc-mail" >Mail</button>

@@ -5,7 +5,7 @@ export default class Navbar extends React.Component {
     render() {
         return (
             <div className="abnb-navbar">
-                <img src="./images/airbnblogo.svg" className="abnb-logo" alt="airbnb logo"/>
+				<img src="./reactlearning/images/airbnblogo.svg" className="abnb-logo" alt="airbnb logo"/>
             </div>
         )
     }

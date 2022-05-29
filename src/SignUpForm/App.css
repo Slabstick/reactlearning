@@ -1,10 +1,5 @@
 .suf-form-container {
-	height: 100vh;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	margin-top: 2rem;
 }
 
 .suf-form {

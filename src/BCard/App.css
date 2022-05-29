@@ -1,7 +1,4 @@
 .bc-container {
-    width: 550px;
-    height: 868px;
-    background-color: #23252C;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +12,6 @@
     height: 780px;
     border-radius: 10px;
     background-color: #1A1B21;
-    
 }
 
 .bc-picture {

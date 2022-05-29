@@ -28,7 +28,6 @@ function App() {
 	}
 
 	return (
-		<div>
 			<div className="suf-form-container">
 				<form className="suf-form" onSubmit={handleSubmit}>
 					<input
@@ -78,7 +77,6 @@ function App() {
 					</button>
 				</form>
 			</div>
-		</div>
 	);
 }
 

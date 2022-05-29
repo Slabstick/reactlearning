@@ -5,32 +5,29 @@
 }
 
 body {
-  margin: 0;
-		font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  left: 50%;
-  top: 2%;
-  transform: translate(-50%, -0%);
-  background-color: #830000;
-  /* color: white; */
-
+	/* margin: 0; */
+	font-family: 'Inter', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #B0916E;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-	monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .main-header {
 	height: 5rem;
-	background-color: blueviolet;
+	background-color: #80694f;
 	width: 100%;
-	border: 5px solid black;
+	box-shadow: 0px 5px black;
+	position: fixed;
+	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	top: 0;
+	left: 0;
 }
 
 .picker-label {
@@ -41,10 +38,12 @@ code {
 }
 
 .mainapp {
-	position: absolute;
-	left: 50%;
-	/* top: 110%; */
-	transform: translate(-50%, 5%);
+	/* position:static; */
+	/* left: 0; */
+	transform: translate(0%, 15%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .main-select {
@@ -55,6 +54,7 @@ code {
 	font-size: 16px;
 	font-weight: 900;
 	cursor: pointer;
+	background-color: #B0916E;
 }
 
 .main-select option {

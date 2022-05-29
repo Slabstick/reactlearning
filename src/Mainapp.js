@@ -17,7 +17,6 @@ function Mainapp() {
 	React.useEffect(() => {
 		return localStorage.setItem('appChoice', appChoice)
 	}, [appChoice])
-	
 
 	function handleChange(event) {
 		setAppChoice(event.target.value)
@@ -36,12 +35,9 @@ function Mainapp() {
 			default: return <BCard />
 	}
 	}
-	
-	
-
 
 	return (
-		<div>
+		<div className='mainbody'>
 			<Header choice={appChoice} handleChange={handleChange}/>
 			<div className='mainapp'>
 				{renderApp()}

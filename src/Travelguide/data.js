@@ -1,4 +1,4 @@
-export default [
+let data = [
     {
         id: 1,
         title: "Mount Fuji",
@@ -31,3 +31,4 @@ export default [
     }
 ]
 
+export default data;
