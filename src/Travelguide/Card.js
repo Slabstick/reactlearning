@@ -1,4 +1,5 @@
 import React from "react";
+import pin from "./pin-icon.png";
 
 
 
@@ -19,7 +20,7 @@ export default class Card extends React.Component {
 					</div>
 					<div className="tg-card-text">
 						<div className="tg-card-location">
-							<img src="./images/pin-icon.png" alt="" className="tg-pin-icon" />
+							<img src={pin} alt="" className="tg-pin-icon" />
 							<span className="tg-location">{this.props.location.toUpperCase()}</span>
 							<a href={this.props.googleMapsUrl} className="tg-location-link" >View on Google Maps</a>
 						</div>

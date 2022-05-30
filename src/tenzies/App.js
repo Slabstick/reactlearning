@@ -23,7 +23,7 @@ function App() {
 		localStorage.setItem('timeStart', timeStart);
 	},[dice, win, rounds, timeWon, timeStart]);
 
-	console.log(localStorage.getItem('timeStart'))
+	// console.log(localStorage.getItem('timeStart'))
 
 	function allNewDice() {
 		const diceArray = []
