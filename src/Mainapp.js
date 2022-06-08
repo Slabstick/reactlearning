@@ -9,7 +9,7 @@ import SignUpForm from "./SignUpForm/App"
 import TravelGuide from "./Travelguide/App"
 import ReactFacts from "./ReactFacts/App"
 import Tenzies from "./tenzies/App"
-
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 function Mainapp() {
 	const [appChoice, setAppChoice] = React.useState(localStorage.getItem('appChoice') || "tenzies")
@@ -37,13 +37,13 @@ function Mainapp() {
 	}
 
 	return (
-		<div className='mainbody'>
+		<Router className='mainbody'>
 			<Header choice={appChoice} handleChange={handleChange}/>
 			<div className='mainapp'>
 				{renderApp()}
 			</div>
 			
-		</div>
+		</Router>
 	);
 }
 
